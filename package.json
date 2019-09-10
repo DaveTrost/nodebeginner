@@ -19,5 +19,9 @@
   "homepage": "https://github.com/DaveTrost/nodebeginner#readme",
   "dependencies": {
     "node": "^12.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "nodemon": "^1.19.2"
   }
 }
