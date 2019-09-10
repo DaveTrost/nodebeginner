@@ -1,0 +1,23 @@
+{
+  "name": "nodebeginner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveTrost/nodebeginner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaveTrost/nodebeginner/issues"
+  },
+  "homepage": "https://github.com/DaveTrost/nodebeginner#readme",
+  "dependencies": {
+    "node": "^12.10.0"
+  }
+}
