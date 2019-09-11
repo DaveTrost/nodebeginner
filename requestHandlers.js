@@ -1,18 +1,20 @@
-function start() {
-    console.log(`Request handler 'start' was called.`);
-    
-    function sleep(ms) {
-        const startTime = new Date().getTime();
-        while(new Date().getTime() < startTime + ms);
-    }
+const exec = require('child_process').exec;
 
-    sleep(10000);
-    return 'Hello Start';
+function start(response) {
+    console.log(`Request handler 'start' was called.`);
+
+    exec('sleep 10 && ls -lah', (error, stdout, stderr) => {
+        response.writeHead(200, { 'Content-Type': 'text/plain' });
+        response.write(stdout || 'empty');
+        response.end();
+    });
 }
 
-function upload() {
+function upload(response) {
     console.log(`Request handler 'upload' was called.`);
-    return 'Hello Upload';
+    response.writeHead(200, { 'Content-Type': 'text/plain' });
+    response.write('Hello Upload');
+    response.end();
 }
 
 exports.start = start;
