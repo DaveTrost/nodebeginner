@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/DaveTrost/nodebeginner#readme",
   "dependencies": {
+    "formidable": "^1.2.1",
     "node": "^12.10.0"
   },
   "devDependencies": {

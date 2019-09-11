@@ -1,4 +1,5 @@
 const querystring = require('querystring');
+const fs = require('fs');
 
 function start(response) {
     console.log(`Request handler 'start' was called.`);
@@ -33,5 +34,13 @@ function upload(response, postData) {
     response.end();
 }
 
+function show(response) {
+    console.log(`Request handler 'show' was called.`);
+    response.writeHead(200, { 'Content-Type': 'image/png' });
+    fs.createReadStream('/Users/davet/alchemy/career-track/nodebeginner/tmp/image.png').pipe(response);
+    // response.end();
+}
+
 exports.start = start;
 exports.upload = upload;
+exports.show = show;
