@@ -75,7 +75,6 @@ function show(response) {
     console.log(`Request handler 'show' was called.`);
     response.writeHead(200, { 'Content-Type': 'image/png' });
     fs.createReadStream('/Users/davet/alchemy/career-track/nodebeginner/tmp/image.png').pipe(response);
-    // response.end();
 }
 
 exports.start = start;
